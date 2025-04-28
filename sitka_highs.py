@@ -23,9 +23,9 @@ for row in reader:
 # 根据最高温度绘图
 plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
-ax.plot(dates, highs, color='red')
-ax.plot(dates, lows, color='blue')
-
+ax.plot(dates, highs, color='red', alpha=0.5)
+ax.plot(dates, lows, color='blue', alpha=0.5)
+ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 # 设置绘图的格式
 ax.set_title("Daily High and Low temperatures, 2021", fontsize=24)
 ax.set_xlabel('', fontsize=16)
